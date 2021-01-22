@@ -61,8 +61,8 @@ eureka.client.fetch-registry=true
 ```
 
 ##### Micro Services
-1. 
-2.
+1. MicroserviceCourseManagementApplication
+2. MicroserviceUserManagementApplication
 
 Create individual Spring Boot Apps for these two Micro services
 
@@ -73,6 +73,7 @@ Create a spring boot app for MicroserviceCourseManagementApplication
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+
 public class MicroserviceCourseManagementApplication {
 
 	public static void main(String[] args) {
