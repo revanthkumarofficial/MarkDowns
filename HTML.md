@@ -1,5 +1,9 @@
 # HTML 
 
+##### REFERENCES
+```
+https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form
+```
 
 ##### TEMPLATES
 
@@ -17,6 +21,7 @@
 </html>
 ```
 
+##### RADIO BUTTONS
 ```
 <form>
   <fieldset>
