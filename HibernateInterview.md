@@ -429,3 +429,10 @@ temporalValues.setUtilTimestamp(
     .parse("2017-11-15 15:30:14.332"));
 
 ```
+
+HIBERNATE MAPPINGS
+```
+https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/
+
+
+```
