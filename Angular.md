@@ -53,3 +53,10 @@ These web workers mainly allow you to run the CPU computations in a background t
 The Angular Universal is defined as the process of SSR (server-side rendering) of your particular application to HTML present on the Server. 
 Basically, all the Angular applications are single-page applications so the rendering always occurs on the browser. 
 The entire process of rendering single-page applications is known as the client-side rendering process (CSR).
+
+##### OBSERVABLES
+Angular makes use of observables as an interface to handle a variety of common asynchronous operations. For example:
+
+You can define custom events that send observable output data from a child to a parent component.
+The HTTP module uses observables to handle AJAX requests and responses.
+The Router and Forms modules use observables to listen for and respond to user-input events.
