@@ -60,3 +60,8 @@ Angular makes use of observables as an interface to handle a variety of common a
 You can define custom events that send observable output data from a child to a parent component.
 The HTTP module uses observables to handle AJAX requests and responses.
 The Router and Forms modules use observables to listen for and respond to user-input events.
+
+##### COMMUNICATION BETWEEN COMPONENTS
+PARENT TO CHILD :   @Input() decorator.
+CHILD TO PARENT :   @Output() open = new EventEmitter<any>();
+                    @Output() close = new EventEmitter<any>();
