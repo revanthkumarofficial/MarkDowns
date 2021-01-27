@@ -402,6 +402,23 @@ Prefer lazy fetching for associations
 
 
 ##### HIBERNATE ANNOTATIONS
+```
+@Entity
+
+@Table
+
+@Id
+
+@GeneratedValue
+
+@Column
+
+@Transient
+
+@OrderBy
+
+@Version
+```
 
 ```
 TemporalType.DATE to map it to a SQL DATE column
