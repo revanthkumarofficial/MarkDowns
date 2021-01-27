@@ -399,3 +399,33 @@ Do not treat exceptions as recoverable, roll back the Transaction and close the 
 Prefer DAO pattern for exposing the different methods that can be used with entity bean
 Prefer lazy fetching for associations
 
+
+
+##### HIBERNATE ANNOTATIONS
+
+```
+TemporalType.DATE to map it to a SQL DATE column
+TemporalType.TIME to map it to a SQL TIME column
+TemporalType.TIMESTAMP to map it to a SQL TIMESTAMP column
+
+@Basic
+@Temporal(TemporalType.DATE)
+private java.util.Date utilDate;
+
+@Basic
+@Temporal(TemporalType.TIME)
+private java.util.Date utilTime;
+
+@Basic
+@Temporal(TemporalType.TIMESTAMP)
+private java.util.Date utilTimestamp;
+
+temporalValues.setUtilDate(
+  new SimpleDateFormat("yyyy-MM-dd").parse("2017-11-15"));
+temporalValues.setUtilTime(
+  new SimpleDateFormat("HH:mm:ss").parse("15:30:14"));
+temporalValues.setUtilTimestamp(
+  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
+    .parse("2017-11-15 15:30:14.332"));
+
+```
