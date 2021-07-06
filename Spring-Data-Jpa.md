@@ -1,25 +1,27 @@
 # SPRING DATA AND SPRING DATA JPA
 
 ##### application.properties
-
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/mydb
 spring.datasource.username=root
 spring.datasource.password=test
 
 spring.jpa.show-sql=true
+```
 
 <hr>
 
 ##### ID GENERATORS
 
 __AUTO STRATEGY:__
+```
 HIBERNATE GO AND  TALK TO THE DATABASE FIGURE OUT WHAT IT SUPPORTS AND GENERATE PRIMARY KEY ID BASED ON DATABASE
 
 SEQUENCE : ALMOST ALL DATABASE SUPPORTS SEQUENCE EXCEPT MYSQL
-
+```
 
 __IDENTITY STRATEGY:__
-
+```
 create table employee(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	name varchar(20)
@@ -42,11 +44,11 @@ public class Employee {
 // GETTERS AND SETTERS
 
 }
-
+```
 
 
 __TABLE STRATEGY:__
-
+```
 create table employee(
 	id int PRIMARY KEY AUTO_INCREMENT,
 	name varchar(20)
@@ -83,11 +85,10 @@ public class Employee {
 // GETTERS AND SETTERS
 
 }
-
-
+```
 
 __CUSTOM RANDOM ID GENERATOR:__
-
+```
 public class CustomRandomIDGenerator implements IdentifierGenerator {
 
 
@@ -116,7 +117,7 @@ public class Employee {
 
     // GETTERS AND SETTERS
 	}
-
+```
 
 __REPO:__
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
