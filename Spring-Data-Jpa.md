@@ -117,19 +117,19 @@ public class Employee {
 
     // GETTERS AND SETTERS
 	}
-```
 
 __REPO:__
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 }
+```
 
 <br>
 
-ASSOCIATIONS
+#### ASSOCIATIONS
 
-ONE TO ONE 
-
+### ONE TO ONE 
+```
 ENTITIES
 
 @Entity
@@ -170,10 +170,10 @@ __REPO__
 public interface LicenseRepository extends CrudRepository<License, Long> {
 
 }
+```
 
-
-##### ONE TO MANY
-
+#### ONE TO MANY
+```
 @Entity
 public class Customer {
 
@@ -272,10 +272,10 @@ REPO
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
 }
+```
 
-
-MANY TO MANY
-
+#### MANY TO MANY
+```
 @Entity
 public class Programmer {
 
@@ -375,9 +375,10 @@ REPO
 public interface ProgrammerRepository extends CrudRepository<Programmer, Integer> {
 
 }
+```
 
-##### COMPONENT MAPPING
-
+#### COMPONENT MAPPING
+```
 @Entity
 public class Employee {
 
@@ -406,12 +407,12 @@ public class Address {
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
 }
-
+```
 
 <hr>
 
-PAGING AND SORTING :
-
+#### PAGING AND SORTING :
+```
 CRUDRepository <- PagingAndSortingRepository
 
 Pageable <- PageRequest
@@ -420,12 +421,12 @@ Sorting
 1. Sort
 2. Direction
 3. Order
-
+```
 <hr>
 
 
 ##### EMBEDDED
-
+```
 @Entity
 public class Customer {
 
@@ -481,12 +482,12 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer> {
 	@Query("update Customer cust set cust.email = :email where cust.id=:id")
 	void updateEmail(@Param("id") int id, @Param("email") String email);
 	}
-
+```
 
 <br>
 
 ##### HIBERNATE INHERITANCE:
-
+```
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Payment {
@@ -523,11 +524,11 @@ __REPO:__
 public interface PaymentRepository extends CrudRepository<Payment, Integer> {
 
 }
-
+```
 <br>
 
 ##### JPQL AND NATIVE SQL
-
+```
 @Entity
 public class Student {
 	
@@ -575,10 +576,10 @@ public interface StudentRepository extends CrudRepository<Student, Long> {
 	List<Student> findByFirstNQ(@Param("firstName")String firstName);
 
 }
-
+```
 
 ##### PATIENTS SCHEDULING
-
+```
 @Entity
 public class Doctor {
 
@@ -859,10 +860,10 @@ public interface DoctorRepository extends CrudRepository<Doctor, Long> {
 public interface PatientRepository extends CrudRepository<Patient, Long> {
 
 }
-
+```
 
 ##### PRODUCT
-
+```
 @Entity
 @Table
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
@@ -929,10 +930,10 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 	List<Product> findByIdIn(List<Integer> ids);
 
 }
-
+```
 
 ##### TRANSACTION MANAGEMENT
-
+```
 @Entity
 public class BankAccount {
 
@@ -1001,7 +1002,7 @@ public class TransactionmanagementApplication {
 		SpringApplication.run(TransactionmanagementApplication.class, args);
 	}
 }
-
+```
 
 
 
